@@ -11,9 +11,9 @@ class UserAdmin(admin.ModelAdmin):
 
 @admin.register(Craftsman)
 class CraftsmanAdmin(admin.ModelAdmin):
-    list_display = ("user", "surname", "telephone", "address", "skills")
+    list_display = ("user", "username", "telephone", "address", "skill")
     search_fields = ("user__username", "surname", "telephone")
-    list_filter = ("skills",)
+    list_filter = ("skill",)
 
 
 @admin.register(Apprentice)
